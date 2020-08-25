@@ -1,5 +1,8 @@
 declare module '*.vue' {
-  import Vue from 'vue';
+  import Vue from 'vue'
 
-  export default Vue;
+  export default Vue
 }
+
+declare module 'nprogress';
+declare module 'vue-loading-overlay';

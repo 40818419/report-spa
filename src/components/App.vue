@@ -8,6 +8,18 @@
   </div>
 </template>
 
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api';
+import Loading from 'vue-loading-overlay';
+import '../../node_modules/vue-loading-overlay/dist/vue-loading.css';
+
+export default defineComponent({
+  components: {
+    Loading,
+  },
+});
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
