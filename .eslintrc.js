@@ -12,6 +12,8 @@ module.exports = {
     ecmaVersion: 2020,
   },
   rules: {
+    'import/prefer-default-export': 0,
+    '@typescript-eslint/interface-name-prefix': [0, { prefixWithI: 'always' }],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
   },
@@ -26,4 +28,11 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['/'],
+      },
+    },
+  },
 };
