@@ -1,5 +1,4 @@
 <template>
-  <v-container>
     <v-row class="text-center">
       <v-col cols="12">
 
@@ -17,8 +16,9 @@
           </v-card-title>
           <v-data-table
             :headers="headers"
-            :items="report"
+            :items="data"
             :search="search"
+            @current-items="getCurrentItems"
           >
             <template v-slot:[`item.body.reportScore`]="{ item }">
               {{ Math.floor(item.body.reportScore) }}
@@ -34,21 +34,22 @@
 
       </v-col>
     </v-row>
-  </v-container>
 </template>
 
 <script lang="ts">
 import {
   defineComponent,
   ref,
-  onMounted,
-  computed,
 } from '@vue/composition-api';
 
 import { formatDate } from '@/helper';
+import { IReport } from '@/modules/Report/state';
 
 export default defineComponent({
-  setup(_, context) {
+  props: {
+    data: Array,
+  },
+  setup(_, { emit }) {
     const search = ref('');
     const headers = ref([
       {
@@ -64,15 +65,15 @@ export default defineComponent({
       { text: 'Published', value: 'publishedAt' },
     ]);
 
-    const report = computed(() => context.root.$store.getters['report/getReport']);
-
-    onMounted(() => context.root.$store.dispatch('report/fetchReport'));
+    const getCurrentItems = (e: IReport[]) => {
+      emit('set-current-items', e);
+    };
 
     return {
       headers,
       search,
-      report,
       formatDate,
+      getCurrentItems,
     };
   },
 });

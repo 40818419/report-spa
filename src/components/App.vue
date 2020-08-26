@@ -6,13 +6,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, onMounted } from '@vue/composition-api';
 import Loading from 'vue-loading-overlay';
 import '../../node_modules/vue-loading-overlay/dist/vue-loading.css';
 
 export default defineComponent({
   components: {
     Loading,
+  },
+  setup(_, context) {
+    onMounted(() => context.root.$store.dispatch('report/fetchReport'));
   },
 });
 </script>

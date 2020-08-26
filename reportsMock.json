@@ -1,0 +1,262 @@
+[
+  {
+    "uuid": "2c84d52d-2584-410d-9728-e7392b0765dc",
+    "body": {
+      "bankName": "Blanda - Witting Bank",
+      "bankBIC": [
+        "JNDIBEA1"
+      ],
+      "reportScore": 79.49769153273903,
+      "type": "extended"
+    },
+    "createdAt": "2020-03-07T15:51:28.133Z",
+    "publishedAt": "2020-04-01T04:58:46.016Z"
+  },
+  {
+    "uuid": "2d084e17-4e05-470f-a726-c66b991864a1",
+    "body": {
+      "bankName": "Murray - Hintz Bank",
+      "bankBIC": [
+        "ANXISTC1"
+      ],
+      "reportScore": 93.34057365887884,
+      "type": "extended"
+    },
+    "createdAt": "2019-12-17T14:41:33.129Z",
+    "publishedAt": "2019-08-20T23:50:25.665Z"
+  },
+  {
+    "uuid": "509ba8d5-33a3-4dfb-aafc-06937bfcfbc6",
+    "body": {
+      "bankName": "Pfeffer, Morar and Steuber Bank",
+      "bankBIC": [
+        "MCDISRK1045"
+      ],
+      "reportScore": 130.13484367785372,
+      "type": "extended"
+    },
+    "createdAt": "2019-07-15T14:37:36.680Z",
+    "publishedAt": "2020-06-02T02:24:26.861Z"
+  },
+  {
+    "uuid": "760183e2-5079-4a95-97b6-7ab136213eec",
+    "body": {
+      "bankName": "Feest Inc Bank",
+      "bankBIC": [
+        "JZKIAEU1RUS"
+      ],
+      "reportScore": 91.43303380248696,
+      "type": "primary"
+    },
+    "createdAt": "2020-04-18T02:56:31.869Z",
+    "publishedAt": "2021-01-03T04:54:03.104Z"
+  },
+  {
+    "uuid": "af7e3bcd-2111-482d-88d6-97295b93a135",
+    "body": {
+      "bankName": "Dickens, Wintheiser and Abbott Bank",
+      "bankBIC": [
+        "CEHITGR1047"
+      ],
+      "reportScore": 65.07359154681237,
+      "type": "intermediate"
+    },
+    "createdAt": "2020-01-04T03:47:22.890Z",
+    "publishedAt": "2019-07-07T04:48:49.708Z"
+  },
+  {
+    "uuid": "5f240d9d-5e58-42e2-b298-d57e11b003ae",
+    "body": {
+      "bankName": "Bruen - Kunde Bank",
+      "bankBIC": [
+        "QZHAYEP1334"
+      ],
+      "reportScore": 58.238832352876386,
+      "type": "intermediate"
+    },
+    "createdAt": "2019-08-04T17:36:23.295Z",
+    "publishedAt": "2020-10-05T14:58:12.065Z"
+  },
+  {
+    "uuid": "ddb5c21b-c1d5-42c4-9a2f-77c89a2c77af",
+    "body": {
+      "bankName": "Turner, Hodkiewicz and Cassin Bank",
+      "bankBIC": [
+        "NJGEAQD1PES"
+      ],
+      "reportScore": 105.92741652749925,
+      "type": "primary"
+    },
+    "createdAt": "2020-01-13T14:56:36.530Z",
+    "publishedAt": "2021-05-13T01:51:55.494Z"
+  },
+  {
+    "uuid": "0a14d498-da4d-4e06-8f9a-e1fe4abcd621",
+    "body": {
+      "bankName": "Schuppe, Ullrich and Considine Bank",
+      "bankBIC": [
+        "FRRITRR1"
+      ],
+      "reportScore": 115.94881056508552,
+      "type": "extended"
+    },
+    "createdAt": "2020-05-21T03:40:05.654Z",
+    "publishedAt": "2021-03-18T01:55:33.570Z"
+  },
+  {
+    "uuid": "fab0ce88-e6e7-422b-8dd7-8f130cc04965",
+    "body": {
+      "bankName": "Heaney, Kirlin and Hettinger Bank",
+      "bankBIC": [
+        "AJSAPEM1"
+      ],
+      "reportScore": 121.67704778384511,
+      "type": "extended"
+    },
+    "createdAt": "2019-06-28T03:11:54.805Z",
+    "publishedAt": "2021-04-01T06:36:58.537Z"
+  },
+  {
+    "uuid": "c906c0d3-b183-4ba1-8bb0-916f49b6a569",
+    "body": {
+      "bankName": "Rolfson - Nienow Bank",
+      "bankBIC": [
+        "NGYUNAX1999"
+      ],
+      "reportScore": 65.99067706954061,
+      "type": "primary"
+    },
+    "createdAt": "2019-06-30T15:44:37.386Z",
+    "publishedAt": "2021-05-28T21:54:57.012Z"
+  },
+  {
+    "uuid": "ba8ccc6f-122d-4b16-ac78-afccd7365d6c",
+    "body": {
+      "bankName": "Huels - Murray Bank",
+      "bankBIC": [
+        "KSMECXO1"
+      ],
+      "reportScore": 105.51160655699807,
+      "type": "primary"
+    },
+    "createdAt": "2020-03-24T09:54:57.290Z",
+    "publishedAt": "2019-08-06T16:40:27.759Z"
+  },
+  {
+    "uuid": "bbe8210b-0bc6-40be-8a0a-1609c8646b76",
+    "body": {
+      "bankName": "Kilback - Kunde Bank",
+      "bankBIC": [
+        "QDMOGLT1846"
+      ],
+      "reportScore": 105.31695091329371,
+      "type": "extended"
+    },
+    "createdAt": "2020-01-07T09:24:24.059Z",
+    "publishedAt": "2019-06-09T03:06:32.189Z"
+  },
+  {
+    "uuid": "9dfaf36e-835c-4d5e-b748-8a19682f5d62",
+    "body": {
+      "bankName": "Weber, Koelpin and Little Bank",
+      "bankBIC": [
+        "UNEUGEJ1091"
+      ],
+      "reportScore": 115.36709837790286,
+      "type": "intermediate"
+    },
+    "createdAt": "2019-08-06T22:20:55.319Z",
+    "publishedAt": "2020-01-02T22:23:45.681Z"
+  },
+  {
+    "uuid": "c0251c98-b593-42e6-8b99-dd54cfb4a364",
+    "body": {
+      "bankName": "Witting, Boyer and Wunsch Bank",
+      "bankBIC": [
+        "OKSEKNZ1"
+      ],
+      "reportScore": 54.28379924215112,
+      "type": "extended"
+    },
+    "createdAt": "2019-06-14T14:40:52.888Z",
+    "publishedAt": "2020-01-04T11:01:55.130Z"
+  },
+  {
+    "uuid": "b779ebf1-055c-4a3b-8486-b697c53de9ea",
+    "body": {
+      "bankName": "Rodriguez Group Bank",
+      "bankBIC": [
+        "KPPUSTE1376"
+      ],
+      "reportScore": 120.08278513252995,
+      "type": "extended"
+    },
+    "createdAt": "2019-07-18T05:48:24.783Z",
+    "publishedAt": "2020-07-15T23:58:59.948Z"
+  },
+  {
+    "uuid": "065acf23-1088-4be6-9da9-3a0f22753dbd",
+    "body": {
+      "bankName": "Farrell, Kuhn and Sanford Bank",
+      "bankBIC": [
+        "ZPKOPWE1878"
+      ],
+      "reportScore": 105.45881038546763,
+      "type": "intermediate"
+    },
+    "createdAt": "2019-12-13T09:15:12.689Z",
+    "publishedAt": "2020-12-19T04:58:29.198Z"
+  },
+  {
+    "uuid": "baa5718b-8461-46b3-914d-cf5a44104946",
+    "body": {
+      "bankName": "Donnelly, Nicolas and Ruecker Bank",
+      "bankBIC": [
+        "GBRASNE1288"
+      ],
+      "reportScore": 66.48136473398627,
+      "type": "extended"
+    },
+    "createdAt": "2020-05-19T11:48:46.326Z",
+    "publishedAt": "2020-10-05T10:30:56.208Z"
+  },
+  {
+    "uuid": "888294b9-1048-49b6-8cc5-067558cd4597",
+    "body": {
+      "bankName": "Jones - Hackett Bank",
+      "bankBIC": [
+        "BGCOMDW1"
+      ],
+      "reportScore": 126.30280724804051,
+      "type": "extended"
+    },
+    "createdAt": "2019-10-21T10:09:04.226Z",
+    "publishedAt": "2021-01-21T03:17:44.028Z"
+  },
+  {
+    "uuid": "7d42e7a9-0dcc-4a9a-a555-d32eb899633b",
+    "body": {
+      "bankName": "MacGyver - Satterfield Bank",
+      "bankBIC": [
+        "ARIUMHN1812"
+      ],
+      "reportScore": 81.92190792703333,
+      "type": "extended"
+    },
+    "createdAt": "2020-02-23T18:36:42.355Z",
+    "publishedAt": "2020-06-23T03:30:37.153Z"
+  },
+  {
+    "uuid": "5bbbba47-ce12-4058-b637-5137dc7bef63",
+    "body": {
+      "bankName": "Simonis, Spencer and Tromp Bank",
+      "bankBIC": [
+        "EHOOBSI1"
+      ],
+      "reportScore": 144.84005422121987,
+      "type": "extended"
+    },
+    "createdAt": "2019-10-16T01:19:08.716Z",
+    "publishedAt": "2020-04-27T23:33:31.968Z"
+  }
+]
