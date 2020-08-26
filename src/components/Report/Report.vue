@@ -1,5 +1,6 @@
 <template>
-  <v-container>
+  <v-container fluid>
+    <h2>Report</h2>
     <report-chart :categories="categories" :scores="scores"  />
     <report-data-table :data="report" @set-current-items="setCurrentItems" />
   </v-container>
@@ -11,7 +12,6 @@ import {
   defineComponent,
   ref,
   watch,
-  toRefs,
 } from '@vue/composition-api';
 import ReportChart from '@/components/ReportChart/ReportChart.vue';
 import ReportDataTable from '@/components/ReportDataTable/ReportDataTable.vue';
@@ -33,7 +33,7 @@ export default defineComponent({
     const categories: { value: string[] } = ref([]);
     const scores: { value: number[] } = ref([]);
 
-    watch(chartReport, (current, prev) => {
+    watch(chartReport, (current) => {
       categories.value = current.map((item: IReport) => item.body.bankName);
       scores.value = current.map((item: IReport) => Math.floor(item.body.reportScore));
     });

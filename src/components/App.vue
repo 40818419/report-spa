@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <Loading />
-    <router-view/>
+    <v-app>
+      <v-main>
+        <router-view/>
+      </v-main>
+    </v-app>
   </div>
 </template>
 
@@ -11,9 +14,6 @@ import Loading from 'vue-loading-overlay';
 import '../../node_modules/vue-loading-overlay/dist/vue-loading.css';
 
 export default defineComponent({
-  components: {
-    Loading,
-  },
   setup(_, context) {
     onMounted(() => context.root.$store.dispatch('report/fetchReport'));
   },

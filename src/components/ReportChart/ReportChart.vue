@@ -1,16 +1,16 @@
 <template>
-  <v-container>
     <v-row class="text-center">
       <v-col cols="12">
-        <apexchart
-          ref="realtimeChart"
-          type="line"
-          height="280"
-          :options="chartOptions"
-          :series="series" />
+        <v-card>
+          <apexchart
+            ref="realtimeChart"
+            type="line"
+            height="280"
+            :options="chartOptions"
+            :series="series" />
+        </v-card>
       </v-col>
     </v-row>
-  </v-container>
 </template>
 
 <script lang="ts">
@@ -59,7 +59,6 @@ export default defineComponent({
           },
         });
       }
-      // console.log(refs.realtimeChart.updateSeries(next[1]));
     });
 
     return { ...toRefs(chartConfig) };
