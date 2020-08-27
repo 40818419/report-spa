@@ -21,12 +21,11 @@
                     item-text="name"
                     item-value="value"
                     label="Published"
-                  ></v-select>
+                  ></v-select> {{publishedAtFilter}}
                 </v-col>
                 <v-col cols="12" sm="4">
                   <v-range-slider
                     label="Score"
-                    data-app
                     v-model="slider"
                     thumb-label
                     :max="max"
@@ -82,12 +81,24 @@ export default defineComponent({
       max: 200,
       slider: [0, 200],
     });
-    const publishedAtFilter = ref(null);
+    const publishedAtFilter = ref(true);
     const items = [
       { name: 'All', value: null },
       { name: 'Published', value: true },
       { name: 'Not Published', value: false },
     ];
+    const reportScoreHeaderFilter = (value: number) => {
+      if (value > scoreFilterSlider.slider[0] && value < scoreFilterSlider.slider[1]) {
+        return value;
+      }
+
+      return false;
+    };
+    const publishedAtHeaderFilter = (value: boolean | null) => {
+      if (publishedAtFilter.value === true) return value != null;
+      if (publishedAtFilter.value === false) return value == null;
+      return true;
+    };
     const headers = computed(() => [
       {
         text: 'Bank Name',
@@ -99,26 +110,14 @@ export default defineComponent({
       {
         text: 'Score',
         value: 'body.reportScore',
-        filter: (value: number) => {
-          if (!scoreFilterSlider.slider) return true;
-
-          if (value > scoreFilterSlider.slider[0] && value < scoreFilterSlider.slider[1]) {
-            return value;
-          }
-
-          return false;
-        },
+        filter: reportScoreHeaderFilter,
       },
       { text: 'Type', value: 'body.type' },
       { text: 'Created', value: 'createdAt' },
       {
         text: 'Published',
         value: 'publishedAt',
-        filter: (value: boolean | null) => {
-          if (publishedAtFilter.value === true) return value != null;
-          if (publishedAtFilter.value === false) return value == null;
-          return true;
-        },
+        filter: publishedAtHeaderFilter,
       },
     ]);
 
@@ -134,6 +133,8 @@ export default defineComponent({
       items,
       publishedAtFilter,
       ...toRefs(scoreFilterSlider),
+      reportScoreHeaderFilter,
+      publishedAtHeaderFilter,
     };
   },
 });
