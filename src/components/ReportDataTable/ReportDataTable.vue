@@ -3,30 +3,38 @@
       <v-col cols="12">
         <v-card>
           <v-card-title>
-            <v-form>
-              <v-text-field
-                v-model="search"
-                append-icon="mdi-magnify"
-                label="Search"
-                single-line
-                hide-details
-              ></v-text-field>
-              <v-slider
-                label="Score"
-                data-app
-                v-model="slider"
-                thumb-label
-                :max="max"
-                :min="min"
-              ></v-slider>
-              <v-select
-                v-model="publishedAtFilter"
-                :items="items"
-                item-text="name"
-                item-value="value"
-                label="Standard"
-              ></v-select> {{publishedAtFilter}}
-            </v-form>
+            <v-container class="lighten-5">
+              <v-row>
+                <v-col cols="12" sm="4">
+                  <v-text-field
+                    v-model="search"
+                    append-icon="mdi-magnify"
+                    label="Search"
+                    single-line
+                    hide-details
+                  />
+                </v-col>
+                <v-col cols="12" sm="4">
+                  <v-select
+                    v-model="publishedAtFilter"
+                    :items="items"
+                    item-text="name"
+                    item-value="value"
+                    label="Published"
+                  ></v-select>
+                </v-col>
+                <v-col cols="12" sm="4">
+                  <v-range-slider
+                    label="Score"
+                    data-app
+                    v-model="slider"
+                    thumb-label
+                    :max="max"
+                    :min="min"
+                  />
+                </v-col>
+              </v-row>
+            </v-container>
           </v-card-title>
           <v-data-table
             :headers="headers"
@@ -72,7 +80,7 @@ export default defineComponent({
     const scoreFilterSlider = reactive({
       min: 0,
       max: 200,
-      slider: 0,
+      slider: [0, 200],
     });
     const publishedAtFilter = ref(null);
     const items = [
@@ -94,7 +102,11 @@ export default defineComponent({
         filter: (value: number) => {
           if (!scoreFilterSlider.slider) return true;
 
-          return value > scoreFilterSlider.slider;
+          if (value > scoreFilterSlider.slider[0] && value < scoreFilterSlider.slider[1]) {
+            return value;
+          }
+
+          return false;
         },
       },
       { text: 'Type', value: 'body.type' },

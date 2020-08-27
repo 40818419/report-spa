@@ -18,12 +18,10 @@ export interface IReport {
 
 export interface IReportState {
   error: Error | null;
-  isLoading: boolean;
   report: IReport[];
 }
 
 export const getDefaultState = (): IReportState => ({
   error: null,
-  isLoading: false,
   report: [],
 });
