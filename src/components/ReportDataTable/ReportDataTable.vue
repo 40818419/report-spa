@@ -21,7 +21,7 @@
                     item-text="name"
                     item-value="value"
                     label="Published"
-                  ></v-select> {{publishedAtFilter}}
+                  ></v-select>
                 </v-col>
                 <v-col cols="12" sm="4">
                   <v-range-slider
@@ -81,7 +81,7 @@ export default defineComponent({
       max: 200,
       slider: [0, 200],
     });
-    const publishedAtFilter = ref(true);
+    const publishedAtFilter = ref(null);
     const items = [
       { name: 'All', value: null },
       { name: 'Published', value: true },
@@ -97,6 +97,7 @@ export default defineComponent({
     const publishedAtHeaderFilter = (value: boolean | null) => {
       if (publishedAtFilter.value === true) return value != null;
       if (publishedAtFilter.value === false) return value == null;
+
       return true;
     };
     const headers = computed(() => [
