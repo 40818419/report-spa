@@ -1,16 +1,19 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Report from './Report.vue';
+import { mount, createLocalVue } from '@vue/test-utils';
+import ReportChart from './ReportChart.vue';
 import Vuex from 'vuex';
 import Vuetify from 'vuetify';
 import router from '../../router';
 import VueCompositionApi from '@vue/composition-api';
+import VueApexCharts from 'vue-apexcharts/dist/vue-apexcharts';
 
 const localVue = createLocalVue();
 
 localVue.use(Vuex);
 localVue.use(VueCompositionApi);
+localVue.use(VueApexCharts);
+localVue.component('apexchart', VueApexCharts);
 
-describe('file `Report.vue`', () => {
+describe('file `ReportChart.vue`', () => {
   let wrapper: any;
   let vuetify: any;
 
@@ -18,7 +21,7 @@ describe('file `Report.vue`', () => {
     vuetify = new Vuetify();
   })
 
-  it('should render `Report` component', async () => {
+  it('should render `ReportChart` component',async () => {
     const mockData = [{
       "uuid": "2d084e17-4e05-470f-a726-c66b991864a1",
       "body": {
@@ -31,25 +34,23 @@ describe('file `Report.vue`', () => {
       },
       "createdAt": "2019-12-17T14:41:33.129Z",
       "publishedAt": "2019-08-20T23:50:25.665Z"
-    }]
+    }];
 
-    wrapper = shallowMount(Report, {
+    wrapper = mount(ReportChart, {
       localVue,
       router,
       vuetify,
-      mocks: {
-        $store: {
-          getters: {
-            ['report/getReport']: []
-          }
-        }
-      }
     });
 
-    wrapper.vm.setCurrentItems(mockData);
+    wrapper.setProps({
+      categories: ['Murray - Hintz Bank'],
+      scores: [93],
+    });
+    const updateOptions = jest.spyOn(wrapper.vm.$refs.realtimeChart, 'updateOptions');
+    const updateSeries = jest.spyOn(wrapper.vm.$refs.realtimeChart, 'updateSeries');
 
     await wrapper.vm.$nextTick();
-    expect(wrapper.vm.categories).toEqual(['Murray - Hintz Bank']);
-    expect(wrapper.vm.scores).toEqual([93]);
+    expect(updateSeries).toHaveBeenCalled();
+    expect(updateOptions).toHaveBeenCalled();
   })
 })

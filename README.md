@@ -15,7 +15,7 @@ npm run serve
 npm run build
 ```
 
-### Run your unit tests
+### Run unit tests
 ```
 npm run test:unit -- --coverage
 ```
@@ -24,6 +24,3 @@ npm run test:unit -- --coverage
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -44,7 +44,7 @@ export default defineComponent({
         name: 'Score',
         data: scores.value,
       }],
-    }) as any;
+    });
 
     watch([categories, scores], (next) => {
       const chart = (context as any).refs.realtimeChart;
