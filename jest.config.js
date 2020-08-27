@@ -22,4 +22,26 @@ module.exports = {
   testMatch: [
     '**/*.spec.[jt]s?(x)',
   ],
+  setupFiles: ['./jest-setup.ts'],
+  transform: {
+    '^.+\\.vue$': 'vue-jest',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
+  },
+  snapshotSerializers: ['jest-serializer-vue'],
+  // preset: '@vue/cli-plugin-unit-jest',
+  coveragePathIgnorePatterns: ['src/shims-vue.d.ts', 'src/shims-tsx.d.ts'],
+  moduleFileExtensions: ['js', 'jsx', 'json', 'vue', 'ts', 'tsx'],
+  transformIgnorePatterns: ['node_modules/(?!vue-router|@babel|vuetify)'],
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
+  },
+  globals: {
+    'ts-jest': {
+      babelConfig: true,
+    },
+    'vue-jest': {
+      hideStyleWarn: true,
+    },
+  },
 };
