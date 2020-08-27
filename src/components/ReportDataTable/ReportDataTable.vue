@@ -69,7 +69,7 @@ import {
 } from '@vue/composition-api';
 
 import { formatDate } from '@/helper';
-import { IReport } from '@/modules/Report/state';
+import { IReport } from '@/modules/report/state';
 
 export default defineComponent({
   props: {

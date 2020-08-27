@@ -15,7 +15,7 @@ import {
 } from '@vue/composition-api';
 import ReportChart from '@/components/ReportChart/ReportChart.vue';
 import ReportDataTable from '@/components/ReportDataTable/ReportDataTable.vue';
-import { IReport } from '@/modules/Report/state';
+import { IReport } from '@/modules/report/state';
 
 export default defineComponent({
   components: {

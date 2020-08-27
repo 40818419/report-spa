@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { report } from '@/modules/Report/module';
+import { report } from '@/modules/report/module';
 
 Vue.use(Vuex);
 

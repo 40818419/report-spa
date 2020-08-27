@@ -5,10 +5,6 @@ import reportJSON from '../../../reports.json';
 
 export const actions = {
   async fetchReport({ commit }: ActionContext<IReportState, IRootState>): Promise<void> {
-    try {
-      commit('SET_REPORT', reportJSON);
-    } catch (error) {
-      commit('SET_ERROR', error);
-    }
+    commit('SET_REPORT', reportJSON);
   },
 };
